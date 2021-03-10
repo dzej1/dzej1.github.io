@@ -1,0 +1,170 @@
+.dark-mode {
+	filter: invert(100%);
+}
+
+* {
+	font-family: monospace;
+}
+
+html {
+	background-color: white;
+}
+
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.5rem;
+}
+
+header {
+	background-color: white;
+	position: sticky;
+	top: 0;
+	transition: all ease 200ms;
+	padding: 1rem;
+}
+
+button {
+	background: none;
+	border: 0;
+	border-radius: 0.25rem;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.25rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding: 0.25rem;
+	transition: background ease-in 100ms;
+	line-height: 50%;
+}
+
+button:focus,
+button:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+section {
+	margin: 0 7rem;
+	padding: 1rem;
+	border-radius: 0.25rem;
+	background-color: #eaeaea;
+}
+
+#add-task {
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#add-task > input {
+	top: 0;
+	width: 85%;
+	font-size: 1.25rem;
+	border: none;
+	border: 1px solid #000;
+	background: none;
+	outline: none;
+	transition: background ease-in 100ms;
+}
+
+#add-task > input:hover,
+#add-task > input:focus {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#tasks,
+.task-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+#tasks {
+	flex-direction: column;
+}
+
+.task-item {
+	margin: 0.25rem 0;
+}
+
+.task-item > span {
+	display: block;
+	overflow: hidden;
+	font-size: 1.25rem;
+	font-weight: 600;
+	width: 100%;
+}
+
+#new-task {
+	margin-right: 1rem;
+}
+
+.delete-task-button,
+.task-done {
+	align-self: center;
+}
+
+#dark-light-mode-switch {
+	display: block;
+	position: fixed;
+	top: 0;
+}
+
+[data-done="true"] > span {
+	color: rgba(0, 0, 0, 0.5);
+	text-decoration: line-through;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+@media (min-width: 769px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	header {
+		margin-left: 1rem;
+		font-size: 3rem;
+		display: flex;
+		align-items: center;
+	}
+
+	h1 {
+		border-bottom: 2rem black solid;
+	}
+
+	main {
+		overflow-y: scroll;
+	}
+
+	section {
+		margin: 1rem 3rem;
+	}
+}
+
+@media (min-width: 1023px) {
+	body {
+		max-width: 1023px;
+		margin: auto;
+	}
+}
