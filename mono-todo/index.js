@@ -10,7 +10,7 @@ let items = localStorageItems === null ? [] : JSON.parse(localStorageItems);
 const renderItem = (item, index) => {
 	let element = document.createElement("div");
 	element.innerText = item[0];
-	tasksList.innerHTML += `<div class="task-item" data-done=${item[1]} key=${index}><span>${element.innerHTML}</span><button class="task-done">O</button><button class="delete-task-button">X</button></div>`;
+	tasksList.innerHTML += `<div class="task-item" data-done=${item[1]} key=${index}><span>${element.innerHTML}</span><button class="task-done" title="hotovo">O</button><button class="delete-task-button" title="smazat">X</button></div>`;
 };
 
 const reRenderList = () => {
